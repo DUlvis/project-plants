@@ -102,7 +102,7 @@ header{
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 240px;
+        border-bottom: 1px solid white;
         a{
             img{
                 max-width: 100%;
@@ -110,17 +110,110 @@ header{
         }
     }
     .header-footer{
-        height: 480px;
+        position: relative;
+        padding: 47.63px 14.5px 35px;
         background: linear-gradient(39.89deg, rgba(0, 115, 12, 0.81) -22.86%, rgba(251, 246, 238, 0) 116.18%);
-       ul{
-        &:first-child{
-            width: 23px;
-            height: 19px;
-            background-image: url(images/li-first.svg);
+        &::after{
+            content: "";
+            display: block;
+            position: absolute;
+            top: 285px;
+            left: -2px;
+            width: 83px;
+            height: 118px;
+            background-image: url(images/header-flower.svg);
             background-repeat: no-repeat;
             background-size: cover;
         }
+       ul{
+        font-family: $Nunito;
+            li{
+                color: $font-color-primary;
+                &:first-child{
+                    display: flex;
+                    align-items: center;
+                    font-size: $font-14;
+                    font-weight: $font700;
+                    &::before{
+                        content: "";
+                        display: block;
+                        width: 23.8px;
+                        height: 19.89px;
+                        background-image: url(images/li-first.svg);
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                    }
+                }
+                &:nth-child(2){
+                    padding: 10px 0;
+                    font-size: $font-28;
+                    font-weight: $font700;
+                    span{
+                        color: $color-primary;
+                    }
+                }
+                &:nth-child(3){
+                    padding: 5px 0 40px 0;
+                    font-size: $font-14;
+                }
+                &:nth-child(4){
+                    text-align: center;
+                    padding: 0px 0 20px 0;
+                    button{
+                        padding: 12px 105px;
+                        border-radius: 5px;
+                        font-family: $Nunito;
+                        font-size: $font-16;
+                        font-weight: $font700;
+                        color: white;
+                        border: 1px solid $color-primary;
+                        background-color: $color-primary;
+                    }
+                }
+                &:nth-child(5){
+                    display: flex;
+                    justify-content: center;
+                    text-align: center;
+                    padding-bottom: 41.32px;
+                    font-size: $font-14;
+                    font-weight: $font600;
+                    color: $color-primary;
+                    &::after{
+                        content: "";
+                        display: block;
+                        width: 16px;
+                        height: 12.65px;
+                        margin-left: 12px;
+                        background-image: url(images/arrow-right.svg);
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                    }
+                }
+                &:nth-child(6){
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                    font-size: $font-10;
+                    a{
+                        display: block;
+                        padding: 9px 10px;
+                        border-radius: 32px;
+                        background: linear-gradient(180deg, #FFF8F1 0%, #CBE5CE 100%);
+                        text-decoration: none;
+                        color: $font-color-primary;
+                        &:nth-child(2){
+                            margin-left: 12px;
+                            background: linear-gradient(180deg, #FFF8F1 0%, #D7E8D9 100%);
+                        }
+                        span{
+                            font-size: $font-12;
+                            font-weight: $font700;
+                        }
+                    }
+                }
+            }
        }
+
     }
 
 }
