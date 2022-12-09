@@ -1,7 +1,15 @@
-header .container {
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+}
+
+.header .container {
   min-width: 300px;
 }
-header .header-top {
+.header .header-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -11,22 +19,22 @@ header .header-top {
   color: white;
   font-size: 12px;
 }
-header .header-top a {
+.header .header-top a {
   font-family: "Nunito", sans-serif;
 }
-header .header-top .header-sociale {
+.header .header-top .header-sociale {
   display: flex;
   justify-content: space-between;
   width: 100px;
 }
-header .header-top .header-social-inner {
+.header .header-top .header-social-inner {
   display: flex;
   align-items: center;
 }
-header .header-top .header-social-contetnt {
+.header .header-top .header-social-content {
   display: none;
 }
-header .header-top .header-email {
+.header .header-top .header-email {
   display: block;
   width: 20px;
   height: 20px;
@@ -34,7 +42,7 @@ header .header-top .header-email {
   background-repeat: no-repeat;
   background-size: cover;
 }
-header .header-top .header-phone {
+.header .header-top .header-phone {
   display: block;
   width: 20px;
   height: 20px;
@@ -42,7 +50,7 @@ header .header-top .header-phone {
   background-repeat: no-repeat;
   background-size: cover;
 }
-header .header-top .header-location {
+.header .header-top .header-location {
   display: block;
   width: 20px;
   height: 20px;
@@ -50,11 +58,11 @@ header .header-top .header-location {
   background-repeat: no-repeat;
   background-size: cover;
 }
-header .header-top .languages {
+.header .header-top .languages {
   display: flex;
   align-items: center;
 }
-header .header-top .languages::after {
+.header .header-top .languages::after {
   content: "";
   display: block;
   width: 7px;
@@ -64,54 +72,69 @@ header .header-top .languages::after {
   background-repeat: no-repeat;
   background-position: center;
 }
-header .header-navigation {
-  height: 70px;
+.header .header-navigation {
   display: flex;
   justify-content: space-between;
-  text-align: center;
+  align-items: center;
+  height: 70px;
   padding: 0 15px 0 15px;
 }
-header .header-navigation a {
+.header .header-navigation a {
   display: flex;
   align-items: center;
 }
-header .header-navigation .navigation-bar {
+.header .header-navigation .navigation-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 110px;
 }
-header .header-navigation .navigation-bar button {
+.header .header-navigation .navigation-bar button {
   width: 40px;
   height: 34px;
   border: none;
+  border: 1px solid #00730C;
   border-radius: 10px;
-  background-image: url(images/CallButton.svg);
+  background-image: url(images/CallButton2.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
-header .header-navigation .navigation-bar .menu {
+.header .header-navigation .navigation-bar button:hover {
+  background-image: url(images/CallButton.svg);
+}
+.header .header-navigation .navigation-bar .menu {
   width: 30px;
   height: 30px;
   background-image: url(images/Menu_1.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
-header .header-photo {
+.header .header-navigation .navigation-bar .menu:hover {
+  background-image: url(images/Menu_2.svg);
+  transition: 0.3s;
+  cursor: pointer;
+}
+.header .header-navigation .navigation-bar .menu:active {
+  background-image: url(images/Menu_cancel.svg);
+  transition: 0.3s;
+  cursor: pointer;
+}
+.header .header-photo {
+  height: 240px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-bottom: 1px solid white;
 }
-header .header-photo a img {
-  max-width: 100%;
+.header .header-photo a img {
+  width: 100%;
 }
-header .header-footer {
+.header .header-footer {
+  height: 420px;
   position: relative;
   padding: 47.63px 14.5px 35px;
   background: linear-gradient(39.89deg, rgba(0, 115, 12, 0.81) -22.86%, rgba(251, 246, 238, 0) 116.18%);
 }
-header .header-footer::after {
+.header .header-footer::after {
   content: "";
   display: block;
   position: absolute;
@@ -123,19 +146,19 @@ header .header-footer::after {
   background-repeat: no-repeat;
   background-size: cover;
 }
-header .header-footer ul {
+.header .header-footer ul {
   font-family: "Nunito", sans-serif;
 }
-header .header-footer ul li {
+.header .header-footer ul li {
   color: #212529;
 }
-header .header-footer ul li:first-child {
+.header .header-footer ul li:first-child {
   display: flex;
   align-items: center;
   font-size: 14px;
   font-weight: 700;
 }
-header .header-footer ul li:first-child::before {
+.header .header-footer ul li:first-child::before {
   content: "";
   display: block;
   width: 23.8px;
@@ -144,42 +167,51 @@ header .header-footer ul li:first-child::before {
   background-repeat: no-repeat;
   background-size: cover;
 }
-header .header-footer ul li:nth-child(2) {
+.header .header-footer ul li:nth-child(2) {
   padding: 10px 0;
   font-size: 28px;
   font-weight: 700;
 }
-header .header-footer ul li:nth-child(2) span {
+.header .header-footer ul li:nth-child(2) span {
   color: #00730C;
 }
-header .header-footer ul li:nth-child(3) {
+.header .header-footer ul li:nth-child(3) {
   padding: 5px 0 40px 0;
   font-size: 14px;
 }
-header .header-footer ul li:nth-child(4) {
+.header .header-footer ul li:nth-child(3) img {
+  display: none;
+}
+.header .header-footer ul li:nth-child(4) {
   text-align: center;
   padding: 0px 0 20px 0;
 }
-header .header-footer ul li:nth-child(4) button {
+.header .header-footer ul li:nth-child(4) button {
   padding: 12px 105px;
   border-radius: 5px;
   font-family: "Nunito", sans-serif;
   font-size: 16px;
   font-weight: 700;
+  color: #00730C;
+  border: 1px solid #00730C;
+  background-color: white;
+}
+.header .header-footer ul li:nth-child(4) button:hover {
   color: white;
   border: 1px solid #00730C;
   background-color: #00730C;
+  cursor: pointer;
 }
-header .header-footer ul li:nth-child(5) {
+.header .header-footer ul li:nth-child(5) {
   display: flex;
   justify-content: center;
-  text-align: center;
+  align-items: center;
   padding-bottom: 41.32px;
   font-size: 14px;
   font-weight: 600;
   color: #00730C;
 }
-header .header-footer ul li:nth-child(5)::after {
+.header .header-footer ul li:nth-child(5)::after {
   content: "";
   display: block;
   width: 16px;
@@ -189,13 +221,13 @@ header .header-footer ul li:nth-child(5)::after {
   background-repeat: no-repeat;
   background-size: cover;
 }
-header .header-footer ul li:nth-child(6) {
+.header .header-footer ul li:nth-child(6) {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   font-size: 10px;
 }
-header .header-footer ul li:nth-child(6) a {
+.header .header-footer ul li:nth-child(6) a {
   display: block;
   padding: 9px 10px;
   border-radius: 32px;
@@ -203,23 +235,83 @@ header .header-footer ul li:nth-child(6) a {
   text-decoration: none;
   color: #212529;
 }
-header .header-footer ul li:nth-child(6) a:nth-child(2) {
+.header .header-footer ul li:nth-child(6) a:nth-child(2) {
   margin-left: 12px;
   background: linear-gradient(180deg, #FFF8F1 0%, #D7E8D9 100%);
 }
-header .header-footer ul li:nth-child(6) a span {
+.header .header-footer ul li:nth-child(6) a span {
   font-size: 12px;
   font-weight: 700;
 }
 
-* {
-  box-sizing: border-box;
+@media (min-width: 768px) {
+  .header .container {
+    min-width: 768px;
+  }
+  .header .container .header-top {
+    height: 59px;
+  }
+  .header .container .header-top .header-sociale {
+    width: auto;
+  }
+  .header .container .header-top .header-social-content {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 0 10px;
+  }
+  .header .container .header-navigation {
+    height: 85px;
+  }
+  .header .container .header-navigation .navigation-bar {
+    width: 250px;
+  }
+  .header .container .header-navigation .navigation-bar button {
+    width: 170px;
+    height: 50px;
+    background-image: url(images/CallButton-large.svg);
+  }
+  .header .container .header-navigation .navigation-bar button:hover {
+    background-image: url(images/CallButton-large2.svg);
+    background-color: #00730C;
+  }
+  .header .container .header-photo {
+    display: none;
+  }
+  .header .container .header-footer {
+    height: auto;
+  }
+  .header .container .header-footer::after {
+    top: 440px;
+    left: -2px;
+  }
+  .header .container .header-footer li:nth-child(1) {
+    font-size: 16px;
+  }
+  .header .container .header-footer li:nth-child(3) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+  }
+  .header .container .header-footer li:nth-child(3) img {
+    display: block;
+  }
+  .header .container .header-footer li:nth-child(5) {
+    font-size: 16px;
+  }
+  .header .container .header-footer li:nth-child(6) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+  }
+  .header .container .header-footer li:nth-child(6) span {
+    font-size: 14px;
+  }
 }
-* ul, * li, * a {
-  color: white;
-}
-
-body {
-  font-family: "Nunito", sans-serif;
-  color: white;
+@media (max-width: 768px) {
+  .header .header-social-content {
+    display: block;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -1,11 +1,9 @@
-header{
+.header{
     .container{
         min-width: 300px;
     }
     .header-top{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include flexSpaceCenter();
         height: 55px;
         padding: 20px 20px 15px;
         background-color: $color-second;
@@ -15,15 +13,13 @@ header{
             font-family: 'Nunito', sans-serif;
         }
         .header-sociale{
-            display: flex;
-            justify-content: space-between;
+            @include flexSpace();
             width: 100px;
         }
         .header-social-inner{
-            display: flex;
-            align-items: center;
+            @include flexAlignCenter();
         }
-        .header-social-contetnt{
+        .header-social-content{
             display: none;
         }
         .header-email{
@@ -51,8 +47,7 @@ header{
             background-size: cover;
         }
         .languages{
-            display: flex;
-            align-items: center;
+            @include flexAlignCenter();
             &::after{
                 content: "";
                 display: block;
@@ -66,28 +61,27 @@ header{
         }
     }
     .header-navigation{
+        @include flexSpaceCenter();
         height: 70px;
-        display: flex;
-        justify-content: space-between;
-        text-align: center;
         padding: 0 15px 0 15px;
         a{
-            display: flex;
-            align-items: center;
+            @include flexAlignCenter();
         }
         .navigation-bar{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            @include flexSpaceCenter();
             width: 110px;
             button{
                 width: 40px;
                 height: 34px;
                 border: none;
+                border: 1px solid $color-primary;
                 border-radius: 10px;
-                background-image: url(images/CallButton.svg);
+                background-image: url(images/CallButton2.svg);
                 background-repeat: no-repeat;
                 background-position: center;
+                    &:hover{
+                        background-image: url(images/CallButton.svg);
+                    }
             }
             .menu{
                 width: 30px;
@@ -95,21 +89,31 @@ header{
                 background-image: url(images/Menu_1.svg);
                 background-repeat: no-repeat;
                 background-position: center;
+                &:hover{
+                    background-image: url(images/Menu_2.svg);
+                    transition: 0.3s;
+                    cursor: pointer;
+                }
+                &:active{
+                    background-image: url(images/Menu_cancel.svg);
+                    transition: 0.3s;
+                    cursor: pointer;
+                }
             }
         }
     }
+   
     .header-photo{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-bottom: 1px solid white;
+        height: 240px;
+        @include flexCenter();
         a{
             img{
-                max-width: 100%;
+                width: 100%;
             }
         }
     }
     .header-footer{
+        height: 420px;
         position: relative;
         padding: 47.63px 14.5px 35px;
         background: linear-gradient(39.89deg, rgba(0, 115, 12, 0.81) -22.86%, rgba(251, 246, 238, 0) 116.18%);
@@ -130,8 +134,7 @@ header{
             li{
                 color: $font-color-primary;
                 &:first-child{
-                    display: flex;
-                    align-items: center;
+                    @include flexAlignCenter();
                     font-size: $font-14;
                     font-weight: $font700;
                     &::before{
@@ -155,6 +158,9 @@ header{
                 &:nth-child(3){
                     padding: 5px 0 40px 0;
                     font-size: $font-14;
+                    img{
+                        display: none;
+                    }
                 }
                 &:nth-child(4){
                     text-align: center;
@@ -165,15 +171,19 @@ header{
                         font-family: $Nunito;
                         font-size: $font-16;
                         font-weight: $font700;
-                        color: white;
+                        color: $color-primary;
                         border: 1px solid $color-primary;
-                        background-color: $color-primary;
+                        background-color: white;
+                        &:hover{
+                            color: white;
+                            border: 1px solid $color-primary;
+                            background-color: $color-primary;
+                            cursor: pointer;
+                        }
                     }
                 }
                 &:nth-child(5){
-                    display: flex;
-                    justify-content: center;
-                    text-align: center;
+                    @include flexCenter();
                     padding-bottom: 41.32px;
                     font-size: $font-14;
                     font-weight: $font600;
@@ -190,9 +200,7 @@ header{
                     }
                 }
                 &:nth-child(6){
-                    display: flex;
-                    justify-content: flex-end;
-                    align-items: center;
+                    @include flex(flex-end, center);
                     font-size: $font-10;
                     a{
                         display: block;
@@ -216,4 +224,71 @@ header{
 
     }
 
+}
+@media (min-width: 768px) {
+    .header{
+        .container{
+            min-width: 768px;
+            .header-top{
+                height: 59px;
+                .header-sociale{
+                    width: auto;
+                }
+                .header-social-content{
+                    display: block;
+                    text-decoration: none;
+                    color: white;
+                    padding: 0 10px;
+                }
+            }
+            .header-navigation{
+                height: 85px;
+                .navigation-bar{
+                    width: 250px;
+                    button{
+                        width: 170px;
+                        height: 50px;
+                        background-image: url(images/CallButton-large.svg);
+                        &:hover{
+                            background-image: url(images/CallButton-large2.svg);
+                            background-color: $color-primary;
+                        }
+                    }
+
+                }
+            }
+            .header-photo{
+                display: none;
+            }
+            .header-footer{
+                height: auto;
+                &::after{
+                    top: 440px;
+                    left: -2px;
+                }
+                li{
+                    &:nth-child(1){
+                        font-size: $font-16;
+                    }
+                    &:nth-child(3){
+                        @include flexSpaceCenter();
+                        img{
+                            display: block;
+                        }
+                        font-size: $font-16;
+                    }
+                    &:nth-child(5){
+                        font-size: $font-16;
+                    }
+                    &:nth-child(6){
+                        @include flexCenter();
+                        font-size: $font-12;
+                        span{
+                            font-size: $font-14;
+                        }
+                    }
+                }
+            }
+        }    
+    }    
 }

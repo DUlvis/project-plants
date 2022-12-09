@@ -1,16 +1,14 @@
-@import "./variables";
-@import "./header";
-@import "./main";
-@import "./footer";
 *{
     box-sizing: border-box;
-    ul,li,a{
-        color: white;
-    }
+    
 }
 body{
     font-family: 'Nunito', sans-serif;
-    color: white;
 }
-
+@import "./variables";
+@import "./mixin";
+@import "./header";
+@import "./header-media";
+@import "./main";
+@import "./footer";
 
