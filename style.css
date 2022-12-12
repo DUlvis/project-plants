@@ -518,4 +518,214 @@ body {
   .header .header-footer .header-footer-img img {
     width: 100%;
   }
+}
+.main {
+  width: 100%;
+  min-width: 335px;
+}
+.main .container {
+  max-width: 1410px;
+  width: 100%;
+}
+.main .services {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 15px;
+}
+.main .services-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 10px;
+}
+.main .services-top h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #212529;
+  line-height: 38.5px;
+}
+.main .services-top h1 span {
+  color: #00730C;
+}
+.main .services-top p {
+  padding-top: 15px;
+  font-size: 14px;
+  color: #676767;
+  line-height: 22px;
+  text-align: center;
+}
+.main .services-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.main .services-main .service-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 345px;
+  max-width: 370px;
+  height: 116px;
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 2px 11px 30px rgba(51, 51, 51, 0.08);
+  border-radius: 10px;
+  background-image: url(images/service-content-BG.svg);
+  background-repeat: no-repeat;
+  background-position: 0 12px;
+}
+.main .services-main .service-content-text {
+  margin-left: 20px;
+}
+.main .services-main h2 {
+  color: #212529;
+  padding-bottom: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 22px;
+}
+.main .services-main p {
+  color: #676767;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+@media (min-width: 768px) {
+  .main .services-main .service-content {
+    max-width: 345px;
+    margin: 10px;
+  }
+}
+@media (min-width: 1500px) {
+  .main .services {
+    padding: 100px 0;
+  }
+  .main .services-top {
+    padding-bottom: 50px;
+  }
+  .main .services-top h1 {
+    font-size: 45px;
+    font-weight: 800;
+    line-height: 61.38px;
+  }
+  .main .services-top p {
+    padding: 30px 137px 0;
+    font-size: 18px;
+    line-height: 30px;
+  }
+  .main .services-main .service-content {
+    flex-direction: column;
+    width: 330px;
+    min-width: 330px;
+    max-width: 330px;
+    height: 366px;
+    margin: 0 15px 0;
+    text-align: center;
+    background-image: url(images/service-content-BG-large.svg);
+    background-position: 75px 8px;
+  }
+  .main .services-main .service-content:first-child {
+    margin-bottom: 30px;
+    margin-left: 0;
+  }
+  .main .services-main .service-content:nth-child(2) {
+    margin-bottom: 30px;
+  }
+  .main .services-main .service-content:nth-child(3) {
+    margin-bottom: 30px;
+  }
+  .main .services-main .service-content:nth-child(4) {
+    margin-bottom: 30px;
+    margin-right: 0;
+  }
+  .main .services-main .service-content:nth-child(5) {
+    margin-left: 0;
+  }
+  .main .services-main .service-content:nth-child(8) {
+    margin-right: 0;
+  }
+  .main .services-main .service-content a {
+    display: block;
+    width: 70px;
+    height: 70px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 50px;
+  }
+  .main .services-main .service-content a img {
+    display: none;
+  }
+  .main .services-main .service-content .cl1 {
+    background-image: url(images/service-content-1-largeD.svg);
+  }
+  .main .services-main .service-content .cl2 {
+    background-image: url(images/service-content-2-largeD.svg);
+  }
+  .main .services-main .service-content .cl3 {
+    background-image: url(images/service-content-3-largeD.svg);
+  }
+  .main .services-main .service-content .cl4 {
+    background-image: url(images/service-content-4-largeD.svg);
+  }
+  .main .services-main .service-content .cl5 {
+    background-image: url(images/service-content-5-largeD.svg);
+  }
+  .main .services-main .service-content .cl6 {
+    background-image: url(images/service-content-6-largeD.svg);
+  }
+  .main .services-main .service-content .cl7 {
+    background-image: url(images/service-content-7-largeD.svg);
+  }
+  .main .services-main .service-content .cl8 {
+    background-image: url(images/service-content-8-largeD.svg);
+  }
+  .main .services-main .service-content:hover {
+    background-color: #00730C;
+  }
+  .main .services-main .service-content:hover .cl1 {
+    background-image: url(images/service-content-1-large.svg);
+  }
+  .main .services-main .service-content:hover .cl2 {
+    background-image: url(images/service-content-2-large.svg);
+  }
+  .main .services-main .service-content:hover .cl3 {
+    background-image: url(images/service-content-3-large.svg);
+  }
+  .main .services-main .service-content:hover .cl4 {
+    background-image: url(images/service-content-4-large.svg);
+  }
+  .main .services-main .service-content:hover .cl5 {
+    background-image: url(images/service-content-5-large.svg);
+  }
+  .main .services-main .service-content:hover .cl6 {
+    background-image: url(images/service-content-6-large.svg);
+  }
+  .main .services-main .service-content:hover .cl7 {
+    background-image: url(images/service-content-7-large.svg);
+  }
+  .main .services-main .service-content:hover .cl8 {
+    background-image: url(images/service-content-8-large.svg);
+  }
+  .main .services-main .service-content:hover h2 {
+    color: white;
+  }
+  .main .services-main .service-content:hover p {
+    color: white;
+  }
+  .main .services-main .service-content-text {
+    margin: 0;
+  }
+  .main .services-main h2 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 33px;
+  }
+  .main .services-main p {
+    font-size: 16px;
+    line-height: 28px;
+    padding: 10px 23px;
+  }
 }/*# sourceMappingURL=style.css.map */

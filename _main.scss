@@ -1,0 +1,229 @@
+.main{
+    width: 100%;
+    min-width: 335px;
+    .container{
+        max-width: 1410px;
+        width: 100%;
+    }
+    .services{
+        @include flexCenter();
+        padding: 50px 15px;
+    }
+    .services-top{
+        @include flexCenter();
+        flex-direction: column;
+        padding-bottom: 10px;
+        h1{
+            font-size: $font-28;
+            font-weight: $font700;
+            color: $font-color-primary;
+            line-height: 38.5px;
+            span{
+                color: $color-primary;
+            }
+        }
+        p{
+            padding-top: 15px;
+            font-size: $font-14;
+            color: $font-color-second;
+            line-height: 22px;
+            text-align: center;
+        }
+    }
+    .services-main{
+        @include flexCenter();
+        flex-wrap: wrap;
+        .service-content{
+            @include flexCenter;
+            min-width: 345px;
+            max-width: 370px;
+            height: 116px;
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: 2px 11px 30px rgba(51, 51, 51, 0.08);
+            border-radius: 10px;
+            background-image: url(images/service-content-BG.svg);
+            background-repeat: no-repeat;
+            background-position: 0 12px;
+        }
+        .service-content-text{
+            margin-left: 20px;
+            
+        }
+        h2{
+            color: $font-color-primary;
+            padding-bottom: 10px;
+            font-size: $font-16;
+            font-weight: $font700;
+            line-height: 22px;
+        }
+        p{
+            color: $font-color-second;
+            font-size: $font-14;
+            line-height: 22px;
+        }
+    }
+    
+}
+@media (min-width: 768px){
+    .main{
+        .services-main{
+            .service-content{
+                max-width: 345px;
+                margin: 10px;
+
+            }
+        }
+    }
+}
+@media (min-width: 1500px){
+    .main{
+        .services{
+            padding: 100px 0;
+        }
+        .services-top{
+            padding-bottom: 50px;
+            h1{
+                font-size: $font-45;
+                font-weight: $font800;
+                line-height: 61.38px;
+            }
+            p{
+                padding: 30px 137px 0;
+                font-size: $font-18;
+                line-height: 30px;
+            }
+        }
+        .services-main{
+            .service-content{
+                flex-direction: column;
+                width: 330px;
+                min-width: 330px;
+                max-width: 330px;
+                height: 366px;
+                margin: 0 15px 0;
+                text-align: center;
+                background-image: url(images/service-content-BG-large.svg);
+                background-position: 75px 8px;
+                &:first-child{
+                    margin-bottom: 30px;
+                    margin-left: 0;
+                }
+                &:nth-child(2){
+                    margin-bottom: 30px;
+                }
+                &:nth-child(3){
+                    margin-bottom: 30px;
+                }
+                &:nth-child(4){
+                    margin-bottom: 30px;
+                    margin-right: 0;
+                }
+                &:nth-child(5){
+                    margin-left: 0;
+                }
+                &:nth-child(8){
+                    margin-right: 0;
+                }
+                a{
+                    display: block;
+                    width: 70px;
+                    height: 70px;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    margin-bottom: 50px;
+                   img{
+                    display: none;
+                    } 
+                }
+                .cl1{
+                    background-image: url(images/service-content-1-largeD.svg);
+                }
+                .cl2{
+                    background-image: url(images/service-content-2-largeD.svg);
+
+                }
+                .cl3{
+                    background-image: url(images/service-content-3-largeD.svg);
+
+                }
+                .cl4{
+                    background-image: url(images/service-content-4-largeD.svg);
+
+                }
+                .cl5{
+                    background-image: url(images/service-content-5-largeD.svg);
+
+                }
+                .cl6{
+                    background-image: url(images/service-content-6-largeD.svg);
+
+                }
+                .cl7{
+                    background-image: url(images/service-content-7-largeD.svg);
+
+                }
+                .cl8{
+                    background-image: url(images/service-content-8-largeD.svg);
+
+                }
+                &:hover{
+                    background-color: $color-primary;
+                    .cl1{
+                        background-image: url(images/service-content-1-large.svg);
+                    }
+                    .cl2{
+                        background-image: url(images/service-content-2-large.svg);
+    
+                    }
+                    .cl3{
+                        background-image: url(images/service-content-3-large.svg);
+    
+                    }
+                    .cl4{
+                        background-image: url(images/service-content-4-large.svg);
+    
+                    }
+                    .cl5{
+                        background-image: url(images/service-content-5-large.svg);
+    
+                    }
+                    .cl6{
+                        background-image: url(images/service-content-6-large.svg);
+    
+                    }
+                    .cl7{
+                        background-image: url(images/service-content-7-large.svg);
+    
+                    }
+                    .cl8{
+                        background-image: url(images/service-content-8-large.svg);
+    
+                    }
+                    h2{
+                        color: white;
+                    }
+                    p{
+                        color: white;
+                    }
+
+                }
+            }
+            .service-content-text{
+                margin: 0;
+                
+            }
+            h2{
+                font-size: $font-24;
+                font-weight: $font700;
+                line-height: 33px;
+            }
+            p{
+                font-size: $font-16;
+                line-height: 28px;
+                padding: 10px 23px;
+            }
+        }
+        
+    }
+}
