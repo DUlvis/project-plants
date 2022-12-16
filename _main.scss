@@ -33,6 +33,7 @@
     .services-main{
         @include flexCenter();
         flex-wrap: wrap;
+        // min-width: 320px;
         .service-content{
             @include flexCenter;
             min-width: 345px;
@@ -63,7 +64,136 @@
             line-height: 22px;
         }
     }
-    
+    .about-us{
+        @include flexCenter();
+    }
+    .about-us-inner{
+        @include flexCenter();
+        flex-wrap: wrap;
+        padding: 0 15px 50px 15px;
+        min-width: 340px;
+    }
+    .about-us-img{
+        min-width: 320px;
+        height: 462px;
+        position: relative;
+        margin-right: 40px;
+
+        
+        div{
+            width: 188px;
+            height: 293px;
+            background-color: $color-primary;
+        }
+        a{
+            position: absolute;
+            &:nth-child(2){
+                top: 12px;
+                left: 12px;
+                z-index: 1;
+            }
+            &:nth-child(3){
+                top: 300px;
+                left: 113px;
+                z-index: 1;
+                border-radius: 5px;
+            }
+        }
+    }
+    .about-us-content{
+        padding-top: 30px;
+        @include flexCenter();
+        flex-direction: column;
+        max-width: 378px;
+        h2{
+            text-align: center;
+            padding-bottom: 15px;
+            font-size: $font-28;
+            font-weight: $font700;
+            color:$font-color-primary;
+            line-height: 38px;
+            span{
+                color:$color-primary;
+            }
+        }
+        p{
+            line-height: 22px;
+            font-size: $font-14;
+            color: $font-color-second;
+        }
+        .about-us-cards{
+            @include flexSpaceCenter();
+            flex-wrap: wrap;
+            padding-top: 40px;
+            min-width: 330px;
+            max-width: 344px
+            
+        }
+        .about-us-card {
+            @include flexCenter();
+            flex-wrap: wrap;
+            width: 162px;
+            height: 94px;
+            box-shadow: 2px 11px 30px rgba(51, 51, 51, 0.08);
+            border-radius: 5px;
+            font-weight: $font700;
+            font-size: $font-14;
+            line-height: 19px;
+            color: $font-color-primary;
+            padding: 15px;
+            margin-bottom: 20px;
+            span{
+                display: block;
+                width: 55px;
+                height: 45px;
+                
+            }
+            
+        }
+        .card1{
+            span{
+                background-image: url(images/about-us-card1.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+        }
+        .card2{
+            span{
+                width: 64px;
+                background-image: url(images/about-us-card2.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+        }
+        .card3{
+            span{
+                background-image: url(images/about-us-card3.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+        }
+        .card4{
+            span{
+                background-image: url(images/about-us-card4.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+        }
+        button{
+            margin-top: 10px;
+            padding: 10px 30px;
+            border: 1px solid $color-primary;
+            border-radius: 5px;
+            color: $color-primary;
+            background-color: white;
+            font-weight: $font700;
+            line-height: 20px;
+            &:hover{
+                background-color: $color-primary;
+                color: white;
+            }
+        }
+    }
 }
 @media (min-width: 768px){
     .main{
@@ -74,6 +204,7 @@
 
             }
         }
+       
     }
 }
 @media (min-width: 1500px){
