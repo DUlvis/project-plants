@@ -751,6 +751,7 @@ body {
   font-weight: 700;
 }
 .main .why-choose-us-content p {
+  text-align: center;
   font-size: 14px;
   line-height: 22px;
   padding-bottom: 40px;
@@ -802,6 +803,12 @@ body {
   .main .services-main .service-content {
     max-width: 345px;
     margin: 10px;
+  }
+  .main .why-choose-us-inner a {
+    margin-right: 10px;
+  }
+  .main .why-choose-us-content {
+    max-width: 375px;
   }
 }
 @media (min-width: 1500px) {
@@ -1027,11 +1034,56 @@ body {
     margin-top: 20px;
     padding: 13px 35px;
     font-size: 18px;
-    font-weight: 700;
     line-height: 24px;
   }
-  .main .about-us-content button:hover {
-    background-color: #00730C;
-    color: white;
+  .main .why-choose-us {
+    padding: 100px 0;
+  }
+  .main .why-choose-us-inner {
+    flex-direction: row-reverse;
+  }
+  .main .why-choose-us-inner a {
+    margin: 0 0 0 82px;
+    align-self: flex-end;
+  }
+  .main .why-choose-us-inner img {
+    width: 672px;
+    height: 426px;
+  }
+  .main .why-choose-us-content {
+    max-width: 656px;
+    justify-content: start;
+  }
+  .main .why-choose-us-content h2 {
+    font-size: 45px;
+    line-height: 61px;
+    padding-bottom: 30px;
+  }
+  .main .why-choose-us-content p {
+    text-align: start;
+    font-size: 18px;
+    line-height: 30px;
+    padding-bottom: 50px;
+  }
+  .main .why-choose-us-content .take-care {
+    font-size: 24px;
+  }
+  .main .why-choose-us-content .take-care span {
+    width: 30px;
+    height: 30px;
+    background-image: url(images/take-care-bg-large.svg);
+  }
+  .main .why-choose-us-content .take-care .take-care-inner {
+    width: 242px;
+    align-items: center;
+  }
+  .main .why-choose-us-content .take-care .take-care-inner:first-child {
+    margin-right: 118px;
+  }
+  .main .why-choose-us-content button {
+    margin-top: 30px;
+    padding: 13px 35px;
+    font-size: 18px;
+    line-height: 24px;
   }
 }/*# sourceMappingURL=style.css.map */

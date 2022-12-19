@@ -219,6 +219,7 @@
             font-weight: $font700;
         }
         p{
+            text-align: center;
             font-size: $font-14;
             line-height: 22px;
             padding-bottom: 40px;
@@ -275,6 +276,14 @@
                 margin: 10px;
 
             }
+        }
+        .why-choose-us-inner{
+            a{
+                margin-right: 10px;
+            }
+        }
+        .why-choose-us-content{
+            max-width: 375px;
         }
        
     }
@@ -528,14 +537,58 @@
                 margin-top: 20px;
                 padding: 13px 35px;
                 font-size: $font-18;
-                font-weight: $font700;
                 line-height: 24px;
-                &:hover{
-                    background-color: $color-primary;
-                    color: white;
-                }
             }
         }
-        
+        .why-choose-us{
+            padding: 100px 0;
+        }
+        .why-choose-us-inner{
+            flex-direction: row-reverse;
+            a{
+                margin: 0 0 0 82px;
+                align-self: flex-end;
+            }
+            img{
+                width: 672px;
+                height: 426px;
+            }
+        }
+        .why-choose-us-content{
+            max-width: 656px;
+            justify-content: start;
+            h2{
+                font-size: $font-45;
+                line-height: 61px;
+                padding-bottom: 30px;
+            }
+            p{
+                text-align: start;
+                font-size: $font-18;
+                line-height: 30px;
+                padding-bottom: 50px;
+            }
+            .take-care{
+                font-size: $font-24;
+                span{
+                    width: 30px;
+                    height: 30px;
+                    background-image: url(images/take-care-bg-large.svg);
+                }
+                .take-care-inner{
+                    width: 242px;
+                    align-items: center;
+                    &:first-child{
+                        margin-right: 118px;
+                    }
+                }
+            }
+            button{
+                margin-top: 30px;
+                padding: 13px 35px;
+                font-size: $font-18;
+                line-height: 24px;
+            }
+        }
     }
 }
