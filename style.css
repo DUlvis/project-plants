@@ -798,6 +798,131 @@ body {
   background-color: #00730C;
   color: white;
 }
+.main .working-process {
+  padding: 50px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main .working-process-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main .working-process-text {
+  text-align: center;
+  padding-bottom: 30px;
+}
+.main .working-process-text h2 {
+  padding-bottom: 15px;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 38px;
+}
+.main .working-process-text h2 span {
+  color: #00730C;
+}
+.main .working-process-text p {
+  font-size: 14px;
+  color: #676767;
+  line-height: 22px;
+}
+.main .working-process-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-bottom: 35px;
+}
+.main .working-process-cards > div {
+  max-width: 384px;
+  padding: 20px;
+  box-shadow: 2px 11px 30px rgba(51, 51, 51, 0.08);
+  border-radius: 10px;
+  margin: 20px 0;
+  background-image: url(images/working-process-cards-bg.svg);
+  background-repeat: no-repeat;
+  background-position: 237px;
+}
+.main .working-process-cards h3 {
+  font-weight: 700;
+  line-height: 22px;
+  color: #212529;
+  padding-bottom: 10px;
+}
+.main .working-process-cards p {
+  font-size: 14px;
+  color: #676767;
+  line-height: 22px;
+}
+.main .logo-counter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+}
+.main .bg {
+  width: 50px;
+  height: 50px;
+  background-repeat: no-repeat;
+  background-size: center;
+}
+.main .counter {
+  padding-right: 10px;
+  font-size: 45px;
+  font-weight: 800;
+  line-height: 61px;
+  color: #e3e3e3;
+}
+.main .card1 .bg {
+  background-image: url(images/Consultation.svg);
+}
+.main .card2 .bg {
+  background-image: url(images/Design\ &\ Work.svg);
+}
+.main .card3 .bg {
+  background-image: url(images/Maintenance.svg);
+}
+.main .card4 .bg {
+  background-image: url(images/Complete.svg);
+}
+.main .working-process-cta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-width: 345px;
+  max-width: 345px;
+  height: 224px;
+  background-image: url(images/working-process-cta-img.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.main .working-process-cta .content {
+  text-align: center;
+  padding: 0 30px;
+}
+.main .working-process-cta .content h2 {
+  padding-bottom: 30px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 27px;
+  color: white;
+}
+.main .working-process-cta .content button {
+  width: 137px;
+  height: 40px;
+  border: none;
+  box-shadow: 2px 11px 30px rgba(51, 51, 51, 0.08);
+  border-radius: 5px;
+  background-image: url(images/cta-button.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.main .working-process-cta .content button:hover {
+  background-image: url(images/cta-button-active.svg);
+  background-color: #00730C;
+}
 
 @media (min-width: 768px) {
   .main .services-main .service-content {
@@ -809,6 +934,13 @@ body {
   }
   .main .why-choose-us-content {
     max-width: 375px;
+  }
+  .main .working-process-cards {
+    max-width: 1090px;
+  }
+  .main .working-process-cards > div {
+    max-width: 345px;
+    margin: 10px;
   }
 }
 @media (min-width: 1500px) {
@@ -1085,5 +1217,115 @@ body {
     padding: 13px 35px;
     font-size: 18px;
     line-height: 24px;
+  }
+  .main .working-process {
+    padding: 100px 0;
+  }
+  .main .working-process-text {
+    padding-bottom: 50px;
+  }
+  .main .working-process-text h2 {
+    padding-bottom: 20px;
+    font-size: 45px;
+    font-weight: 800;
+    line-height: 61px;
+  }
+  .main .working-process-text p {
+    font-size: 18px;
+    line-height: 30px;
+    padding: 0 137px;
+  }
+  .main .working-process-cards {
+    padding-bottom: 85px;
+    max-width: 100%;
+  }
+  .main .working-process-cards > div {
+    max-width: 330px;
+    padding: 50px 30px 70px 30px;
+    margin: 15px;
+    background-image: url(images/working-process-cards-bg-large.svg);
+    background-position: 190px;
+  }
+  .main .working-process-cards > div:first-child {
+    margin-left: 0;
+  }
+  .main .working-process-cards > div:last-child {
+    margin-right: 0;
+  }
+  .main .working-process-cards > div:hover {
+    background-color: #00730C;
+    background-image: url(images/working-process-cards-bg-large-white.svg);
+  }
+  .main .working-process-cards > div:hover h3,
+.main .working-process-cards > div:hover p,
+.main .working-process-cards > div:hover .counter {
+    color: white;
+  }
+  .main .working-process-cards h3 {
+    font-size: 24px;
+    line-height: 33px;
+    padding-bottom: 20px;
+  }
+  .main .working-process-cards p {
+    font-size: 18px;
+    line-height: 30px;
+  }
+  .main .logo-counter {
+    padding-bottom: 40px;
+  }
+  .main .bg {
+    width: 70px;
+    height: 70px;
+    background-repeat: no-repeat;
+    background-size: center;
+    background-size: cover;
+  }
+  .main .counter {
+    padding-right: 0;
+    font-size: 78px;
+    line-height: 106px;
+  }
+  .main .card1:hover .bg {
+    background-image: url(images/Consultation-large-white.svg);
+  }
+  .main .card2:hover .bg {
+    background-image: url(images/Design-Work-large-white.svg);
+  }
+  .main .card3:hover .bg {
+    background-image: url(images/Maintenance-large-white.svg);
+  }
+  .main .card4:hover .bg {
+    background-image: url(images/Complete-large-white.svg);
+  }
+  .main .working-process-cta {
+    flex-direction: row;
+    justify-content: end;
+    min-width: 1410px;
+    max-width: 1410px;
+    height: 247px;
+    background-image: url(images/working-process-cta-img-large.svg);
+  }
+  .main .working-process-cta .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 763px;
+    padding-right: 60px;
+    padding-left: 0;
+  }
+  .main .working-process-cta .content h2 {
+    text-align: start;
+    width: 468px;
+    font-size: 33px;
+    line-height: 45px;
+    padding-bottom: 0;
+  }
+  .main .working-process-cta .content button {
+    width: 170px;
+    height: 50px;
+    background-image: url(images/CallButton-large.svg);
+  }
+  .main .working-process-cta .content button:hover {
+    background-image: url(images/CallButton-large2.svg);
   }
 }/*# sourceMappingURL=style.css.map */
