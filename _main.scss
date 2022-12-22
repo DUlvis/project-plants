@@ -77,7 +77,12 @@
         height: 462px;
         position: relative;
         margin-right: 40px;
-
+        .about-us-img-big-large{
+            display: none;
+        }
+        .about-us-img-small-large{
+            display: none;
+        }
         div {
             width: 188px;
             height: 293px;
@@ -201,6 +206,9 @@
     .why-choose-us-inner {
         @include flexCenter();
         flex-wrap: wrap;
+        .why-choose-us-img-large{
+            display: none
+        }
     }
     .why-choose-us-content {
         @include flexCenter();
@@ -358,7 +366,7 @@
         min-width: 345px;
         max-width: 345px;
         height: 224px;
-        background-image: url(images/working-process-cta-img.svg);
+        background-image: url(images/working-process-cta-img.png);
         background-repeat: no-repeat;
         background-position: center;
         .content {
@@ -387,6 +395,108 @@
             }
         }
     }
+    .team {
+        @include flexCenter();
+        padding: 0 15px 50px 15px;
+        
+    }
+    .team-inner {
+        text-align: center;
+    }
+    .team-content {
+        h2 {
+            font-size: $font-28;
+            font-weight: $font700;
+            line-height: 38px;
+            span {
+                color: $color-primary;
+            }
+            padding-bottom: 15px;
+        }
+        p {
+            font-size: $font-14;
+            line-height: 22px;
+            color: $font-color-second;
+            padding-bottom: 30px;
+        }
+        button {
+            padding: 10px 30px;
+            border: 1px solid $color-primary;
+            border-radius: 5px;
+            background-color: white;
+            font-family: "Nunito", sans-serif;
+            font-size: $font-16;
+            color: $color-primary;
+            font-weight: $font700;
+            line-height: 20px;
+            &:hover {
+                background-color: $color-primary;
+                color: white;
+            }
+        }
+    }
+    .team-cards {
+        @include flexCenter();
+        align-items: flex-end;
+        padding-top: 40px;
+        color: white;
+        .cards {
+            @include flexColumnCenter();
+            justify-content: flex-end;
+            width: 345px;
+            height: 343px;
+            border-radius: 5px;
+            .text {
+                width: 100%;
+                padding: 7px 0;
+                background: linear-gradient(
+                    6.68deg,
+                    #00730c 4.95%,
+                    rgba(251, 246, 238, 0) 264.79%
+                );
+                border-radius: 5px;
+            }
+            h2{
+                font-size: $font-18;
+                font-weight: $font700;
+                line-height: 25px;
+            }
+            p{
+                font-size: $font-14;
+                line-height: 22px;
+            }
+            .social-media{
+                display: none
+            }
+        }
+        .card1{
+            display: none;
+        }
+        .card2{
+            background-image: url(images/team-card1.png);
+        }
+        .card3{
+            display: none;
+        }
+        .card4{
+            display: none;
+        }
+    }
+    .slider{
+        @include flexCenter();
+        padding-top: 30px;
+        div{
+            width: 20px;
+            height: 6px;
+            margin: 0 6px;
+            border-radius: 8px;
+            background-color: $color-primary;
+            &:nth-child(3){
+                width: 50px;
+            }
+        }
+    }
+    
 }
 
 // MEDIA 768
@@ -414,6 +524,22 @@
                 margin: 10px;
             }
         }
+        .team{
+            .container{
+                @include flexCenter()
+            }
+        }
+        .team-inner {
+            @include flexSpaceCenter();
+            width: 768px;
+        }
+        .team-content {
+            width: 345px;
+        }
+        .slider{
+            display: none;
+        }
+
     }
 }
 
@@ -560,6 +686,18 @@
             padding: 0;
         }
         .about-us-img {
+            .about-us-img-big{
+                display: none;
+            }
+            .about-us-img-small{
+                display: none;
+            }
+            .about-us-img-big-large{
+                display: block;
+            }
+            .about-us-img-small-large{
+                display: block;
+            }
             height: 903px;
             div {
                 width: 450px;
@@ -657,6 +795,9 @@
         }
         .why-choose-us {
             padding: 100px 0;
+            background-image: url(images/Why-choose-us-BG.svg);
+            background-repeat: no-repeat;
+            background-position: center;
         }
         .why-choose-us-inner {
             flex-direction: row-reverse;
@@ -667,6 +808,12 @@
             img {
                 width: 672px;
                 height: 426px;
+            }
+            .why-choose-us-img{
+                display: none;
+            }
+            .why-choose-us-img-large{
+                display: block;
             }
         }
         .why-choose-us-content {
@@ -806,7 +953,7 @@
             min-width: 1410px;
             max-width: 1410px;
             height: 247px;
-            background-image: url(images/working-process-cta-img-large.svg);
+            background-image: url(images/working-process-cta-img-large.png);
             .content {
                 @include flexSpaceCenter();
                 width: 763px;
@@ -828,6 +975,115 @@
                     }
                 }
             }
+        }
+        .team{
+            padding: 0 0 100px 0;
+            .container{
+                display: block
+            }
+        }
+        .team-inner {
+            display: block;
+            width: 100%;
+        }
+        .team-content {
+            @include flexSpaceCenter();
+            width: 100%;
+            text-align: start;
+            padding-bottom: 50px;
+            .content{
+                width: 956px;
+            }
+            h2 {
+                font-size: $font-45;
+                font-weight: $font800;
+                line-height: 61px;
+                padding-bottom: 30px;
+            }
+            p {
+                font-size: $font-18;
+                line-height: 30px;
+                padding-bottom: 0;
+            }
+            button {
+                align-self: flex-end;
+                padding: 13px 35px;
+                font-size: $font-18;
+                line-height: 24px;
+            }
+        }
+        .team-cards {
+            @include flexSpaceCenter();
+            padding-top: 0;
+            .card1{
+                background-image: url(images/team-card1-large.png);
+            }
+            .card2{
+                background-image: url(images/team-card2-large.png);
+            }
+            .card3{
+                background-image: url(images/team-card3-large.png);
+            }
+            .card4{
+                background-image: url(images/team-card4-large.png);
+            }
+            .cards {
+                @include flexColumnCenter();
+                justify-content: flex-end;
+                width: 330px;
+                height: 408px;
+                border-radius: 10px;
+                .text {
+                    border-radius: 10px;
+                }
+                h2{
+                    font-size: $font-24;
+                    line-height: 33px;
+                }
+                p{
+                    font-size: $font-18;
+                    line-height: 30px;
+                    
+                }
+                &:hover{
+                    @include flexColumnCenter();
+                    justify-content: center;
+                    .text{
+                        @include flexColumnCenter();
+                        justify-content: center;
+                        height: 100%;
+                    }
+                    .social-media{
+                        @include flexSpaceCenter();
+                        width: 250px;
+                        padding-top: 20px;
+                        margin: 0 auto;
+                        a{
+                            display: block;
+                            width: 30px;
+                            height: 30px;
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            &:first-child{
+                                background-image: url(images/Google.svg);
+                            }
+                            &:nth-child(2){
+                                background-image: url(images/facebook.svg);
+                            }
+                            &:nth-child(3){
+                                background-image: url(images/twitter.svg);
+                            }
+                            &:nth-child(4){
+                                background-image: url(images/pinterest.svg);
+                            }
+                            &:last-child{
+                                background-image: url(images/linkedin.svg);
+                            }
+                        }
+                    }
+                }
+            }
+            
         }
     }
 }
