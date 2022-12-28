@@ -596,7 +596,82 @@
         }
         
     }
-    
+    .faq{
+        @include flexCenter();
+    }
+    .faq-inner{
+        padding: 0 15px;
+    }
+    .faq-content {
+        .content{
+            text-align: center;
+            padding-bottom: 30px;
+            h2 {
+                font-size: $font-28;
+                font-weight: $font700;
+                line-height: 38px;
+                span {
+                    color: $color-primary;
+                }
+                padding-bottom: 15px;
+            }
+            p {
+                font-size: $font-14;
+                line-height: 22px;
+                color: $font-color-second;
+            }
+        }
+    }
+    .faq-questions{
+        @include flexCenter();
+        flex-direction: column;
+        font-size: $font-14;
+        .faq-questions-inner{
+            @include flexColumnCenter;
+            padding: 10px 0;
+            &:hover{
+                .question{
+                    background-color: $color-primary;
+                    color: white;
+                    span{
+                        background-image: url(images/Minus.svg);
+                    }
+                }
+                .answer{
+                    display: block;
+                }
+            }
+        }
+        .question{
+            @include flexSpaceCenter();
+            min-width: 345px;
+            height: 44px;
+            padding: 0 20px;
+            background-color: #FFF8F1;
+            border-radius: 5px;
+            font-weight: $font600;
+            line-height: 19px;
+            color: $font-color-primary;
+            span{
+                display: block;
+                width: 20px;
+                height: 20px;
+                background-image: url(images/Plus.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+        }
+        .answer{
+            display: none;
+            width: 313px;
+            line-height: 22px;
+            color: $font-color-second;
+            padding-top: 20px;
+        }
+        .faq-img{
+            display: none;
+        }
+    }
 }
 
 // MEDIA 768
@@ -1297,11 +1372,7 @@
                         }
                     }
                 }
-                
-                
             }
-            
-            
         }
     }
 }

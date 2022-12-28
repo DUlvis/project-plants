@@ -7,6 +7,10 @@
     display: flex;
     align-items: center;
 }
+@mixin flexJustifyCenter (){
+    display: flex;
+    justify-content: center;
+}
 @mixin flexSpace {
     display: flex;
     justify-content: space-between;
