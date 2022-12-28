@@ -246,8 +246,7 @@
             }
             .take-care-inner {
                 display: flex;
-                width: 158px;
-
+                width: 163px;
                 &:first-child {
                     margin-right: 29px;
                 }
@@ -496,6 +495,107 @@
             }
         }
     }
+    .clients-saying {
+        width: 100%;
+        @include flexCenter();
+        padding: 50px 15px;
+        background-image: url(images/clients-saying-bg.png);
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: 100% 585px;
+        
+    }
+    .clients-saying-inner {
+        text-align: center;
+    }
+    .clients-content {
+
+        padding-bottom: 40px;
+        h2 {
+            font-size: $font-28;
+            font-weight: $font700;
+            line-height: 38px;
+            span {
+                color: $color-primary;
+            }
+            padding-bottom: 15px;
+        }
+        p {
+            font-size: $font-14;
+            line-height: 22px;
+            color: $font-color-second;
+        }
+        button {
+            display: none;
+            &:hover {
+                background-color: $color-primary;
+                color: white;
+            }
+        }
+    }
+    .clients-cards {
+        @include flexCenter();
+        padding-top: 40px;
+        .cards {
+            text-align: start;
+            width: 345px;
+            padding: 20px;
+            background: #FFFFFF;
+            box-shadow: 2px 11px 30px rgba(51, 51, 51, 0.08);
+            .client-card-img-large{
+                display: none;
+            }
+            img{
+                width: 135px;
+                height: 183px;
+            }
+            .text {
+                padding-top: 44px;
+                background-image: url(images/clients-saying-text-bg.svg);
+                background-repeat: no-repeat;
+                background-position: 0 31px;
+            }
+            h2{
+                font-size: $font-16;
+                font-weight: $font700;
+                line-height: 22px;
+                padding-bottom: 2px;
+                color: $font-color-primary;
+            }
+            p{
+                font-size: $font-14;
+                line-height: 22px;
+                padding-bottom: 15px;
+                color: $font-color-second;
+            }
+            .name{
+                @include flexSpaceCenter();
+                p{
+                    font-size: $font-12;
+                    line-height: 16px;
+                    padding-bottom: 0;
+                }
+                
+                .star{
+                    @include flexCenter();
+                    div{
+                        margin: 0 5px;
+                        width: 20px;
+                        height: 20px;
+                        background-image: url(images/star.svg);
+                        background-repeat: no-repeat;
+                        background-position: center;
+                    }
+                }
+            }
+            
+            
+        }
+        .card2{
+            display: none;
+        }
+        
+    }
     
 }
 
@@ -538,6 +638,14 @@
         }
         .slider{
             display: none;
+        }
+        .clients-saying-inner{
+            @include flexCenter();
+        }
+        .clients-content{
+            width: 435px;
+            padding-right: 90px;
+
         }
 
     }
@@ -1083,6 +1191,116 @@
                     }
                 }
             }
+            
+        }
+        .clients-saying {
+            padding: 100px 0;
+            background-image: url(images/clients-saying-bg-large.png);
+        }
+        .clients-saying-inner {
+            text-align: start;
+            display: block;
+        }
+        .clients-content {
+            @include flexSpaceCenter();
+            width: 100%;
+            padding-right: 0;
+            padding-bottom: 50px;
+            .content{
+                width: 956px;
+            }
+            h2 {
+                font-size: $font-45;
+                font-weight: $font800;
+                line-height: 61px;
+                padding-bottom: 30px;
+            }
+            p {
+                font-size: $font-18;
+                line-height: 30px;
+            }
+            .arrow{
+                @include flexSpaceCenter();
+                width: 130px;
+                align-self: flex-end;
+                button {
+                    display: block;
+                    width: 50px;
+                    height: 50px;
+                    border: 1px solid $color-primary;
+                    border-radius: 5px;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    &:hover:first-child {
+                        background-image: url(images/clients-saying-arrow-left2.svg);
+                    }
+                    &:hover:last-child {
+                        background-image: url(images/clients-saying-arrow-right.svg);
+                    }
+                    &:first-child{
+                        background-image: url(images/clients-saying-arrow-left.svg);
+                    }
+                    &:last-child{
+                        background-image: url(images/clients-saying-arrow-right2.svg);
+                    }
+                }
+                
+            }
+            
+        }
+        .clients-cards {
+            @include flexSpaceCenter();
+            padding-top: 0;
+            .cards {
+                @include flexSpaceCenter();
+                width: 690px;
+                padding: 32px 32px 32px 25px;
+                .client-card-img{
+                    display: none;
+                }
+                .client-card-img-large{
+                    display: block;
+                }
+                img{
+                    width: 193px;
+                    height: 276px;
+                }
+                .text {
+                    height: 264px;
+                    padding-left: 30px;
+                    padding-top: 25px;
+                    background-image: url(images/clients-saying-text-bg-large.svg);
+                    background-position: 30px 0;
+                }
+                h2{
+                    font-size: $font-24;
+                    line-height: 33px;
+                    padding-bottom: 2px;
+                }
+                p{
+                    font-size: $font-18;
+                    line-height: 30px;
+                    padding-bottom: 27px;
+                }
+                .name{
+                    p{
+                        font-size: $font-14;
+                        line-height: 25px;
+                    }
+                    
+                    .star{
+                        div{
+                            margin: 0 5px;
+                            width: 25px;
+                            height: 25px;
+                            background-image: url(images/star-large.svg);
+                        }
+                    }
+                }
+                
+                
+            }
+            
             
         }
     }
