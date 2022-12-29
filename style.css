@@ -1407,16 +1407,6 @@ body {
   .main .faq-questions .answer {
     width: 100%;
   }
-  .main .blog-inner {
-    padding: 50px 15px;
-  }
-  .main .blog-inner .blog-cards .card:first-child {
-    display: block;
-    margin-right: 40px;
-  }
-  .main .blog-inner .blog-cards .card:first-child p {
-    padding-bottom: 118px;
-  }
   .main .company-logos a {
     width: 202px;
     height: 100px;
@@ -1426,6 +1416,16 @@ body {
   }
   .main .company-logos a .logo-large {
     display: block;
+  }
+  .blog-inner {
+    padding: 50px 15px;
+  }
+  .blog-inner .blog-cards .card:first-child {
+    display: block;
+    margin-right: 40px;
+  }
+  .blog-inner .blog-cards .card:first-child p {
+    padding-bottom: 118px;
   }
 }
 @media (min-width: 1500px) {
