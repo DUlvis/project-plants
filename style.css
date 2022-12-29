@@ -1325,6 +1325,34 @@ body {
 .main .blog-slider {
   display: none;
 }
+.main .company-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0 0 50px 0;
+}
+.main .company-logos a {
+  display: block;
+  width: 141px;
+  height: 70px;
+  margin: 0 30px;
+}
+.main .company-logos a .logo-large {
+  display: none;
+}
+.main .company-logos a:nth-child(3) {
+  display: none;
+}
+.main .company-logos a:nth-child(4) {
+  display: none;
+}
+.main .company-logos a:nth-child(5) {
+  display: none;
+}
+.main .company-logos a:nth-child(6) {
+  display: none;
+}
 
 @media (min-width: 768px) {
   .main .services-main .service-content {
@@ -1379,15 +1407,25 @@ body {
   .main .faq-questions .answer {
     width: 100%;
   }
-  .blog-inner {
+  .main .blog-inner {
     padding: 50px 15px;
   }
-  .blog-inner .blog-cards .card:first-child {
+  .main .blog-inner .blog-cards .card:first-child {
     display: block;
     margin-right: 40px;
   }
-  .blog-inner .blog-cards .card:first-child p {
+  .main .blog-inner .blog-cards .card:first-child p {
     padding-bottom: 118px;
+  }
+  .main .company-logos a {
+    width: 202px;
+    height: 100px;
+  }
+  .main .company-logos a .logo {
+    display: none;
+  }
+  .main .company-logos a .logo-large {
+    display: block;
   }
 }
 @media (min-width: 1500px) {
@@ -2215,5 +2253,36 @@ body {
   }
   .main .blog-inner .blog-slider div:hover {
     background-color: #00730C;
+  }
+  .main .company-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0 100px 100px;
+  }
+  .main .company-logos a {
+    display: block;
+    width: 202px;
+    height: 100px;
+    margin: 0 30px;
+  }
+  .main .company-logos a .logo {
+    display: none;
+  }
+  .main .company-logos a .logo-large {
+    display: block;
+  }
+  .main .company-logos a:nth-child(3) {
+    display: block;
+  }
+  .main .company-logos a:nth-child(4) {
+    display: block;
+  }
+  .main .company-logos a:nth-child(5) {
+    display: block;
+  }
+  .main .company-logos a:nth-child(6) {
+    display: block;
   }
 }/*# sourceMappingURL=style.css.map */

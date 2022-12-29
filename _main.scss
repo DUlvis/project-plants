@@ -774,6 +774,32 @@
     .blog-slider{
         display: none;
     }
+    .company-logos{
+        @include flexCenter();
+        width: 100%;
+        padding: 0 0 50px 0;
+        a{
+            display: block;
+            width: 141px;
+            height: 70px;
+            margin: 0 30px;
+            .logo-large{
+                display: none;
+            }
+            &:nth-child(3){
+                display: none;
+            }
+            &:nth-child(4){
+                display: none;
+            }
+            &:nth-child(5){
+                display: none;
+            }
+            &:nth-child(6){
+                display: none;
+            }
+        }
+    }
 
 }
 
@@ -836,22 +862,35 @@
                 width: 100%;
             }
         }
-
-    }
-    .blog-inner{
-        padding: 50px 15px;
-        .blog-cards{
-            .card{
-                &:first-child{
-                    display: block;
-                    margin-right: 40px;
-                    p{
-                        padding-bottom: 118px;
+        .blog-inner{
+            padding: 50px 15px;
+            .blog-cards{
+                .card{
+                    &:first-child{
+                        display: block;
+                        margin-right: 40px;
+                        p{
+                            padding-bottom: 118px;
+                        }
                     }
                 }
             }
         }
+        .company-logos{
+            a{
+                width: 202px;
+                height: 100px;
+                .logo{
+                    display: none;
+                }
+                .logo-large{
+                    display: block;
+                }
+            }
+        }
+
     }
+    
     
 }
 
@@ -1692,6 +1731,35 @@
                     &:hover{
                         background-color: $color-primary;
                     }
+                }
+            }
+        }
+        .company-logos{
+            @include flexCenter();
+            width: 100%;
+            padding: 0 100px 100px;
+            a{
+                display: block;
+                width: 202px;
+                height: 100px;
+                margin: 0 30px;
+                .logo{
+                    display: none;
+                }
+                .logo-large{
+                    display: block;
+                }
+                &:nth-child(3){
+                    display: block;
+                }
+                &:nth-child(4){
+                    display: block;
+                }
+                &:nth-child(5){
+                    display: block;
+                }
+                &:nth-child(6){
+                    display: block;
                 }
             }
         }
